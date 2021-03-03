@@ -5,7 +5,7 @@ export const Title = styled(motion.h1)`
   font-size: 32px;
   font-weight: bold;
   color: ${({ theme }) => theme.text};
-  padding: 32px 0 64px 0;
+  padding: 32px 0;
   transition: all 0.5s ease;
 
   @media screen and (max-width: 1130px) {

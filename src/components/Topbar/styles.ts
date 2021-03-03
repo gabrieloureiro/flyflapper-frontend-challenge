@@ -1,5 +1,4 @@
 /* eslint-disable prettier/prettier */
-import { motion } from 'framer-motion'
 import styled from 'styled-components'
 
 import { IconWrapperProps } from './types'
@@ -21,16 +20,6 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 1180px;
 `
-export const IconWrapper = styled.div<IconWrapperProps>`
-  position: absolute;
-  bottom: 14px;
-  right: 80px;
-  padding: 8px;
-  background: transparent;
-  cursor: pointer;
-  position: absolute;
-  transition: transform 0.5s ease;
-`
 
 export const Logos = styled.div`
   position: absolute;
@@ -50,14 +39,13 @@ export const Brand = styled.img`
   transition: all 0.5s ease;
   cursor: pointer;
 
-  @media screen and (max-width: 315px) {
-    height: 20px;
-    &:first-child {
-      width: 40px;
-    }
+`
+export const RightContent = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
 
-    &:last-child {
-      width: 20px;
-    }
-  }
+svg {
+  cursor: pointer;
+}
 `

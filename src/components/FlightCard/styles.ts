@@ -14,6 +14,16 @@ export const Card = styled.div<FlightCardProps>`
   padding: 16px;
   transition: all 100ms ease;
   border-radius: 5px;
+  transition: all 250ms ease-in-out;
+  box-shadow: 0px 5px 7px #0000000d;
+
+  :hover {
+    transform: translateY(-6px);
+
+    img {
+      transform: scale(1.02)
+    }
+  }
 
   :nth-child(2) {
     margin-left: 12px;
@@ -27,6 +37,7 @@ export const Card = styled.div<FlightCardProps>`
     max-width: 100%;
     border-radius: 5px;
     height: 225px;
+    transition: all 0.3s ease-out 0s;
   }
 
   h2 {

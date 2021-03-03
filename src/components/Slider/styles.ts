@@ -12,4 +12,8 @@ export const Wrapper = styled(motion.div)`
   width: 100%;
   padding: 16px 0 24px 0;
   display: flex;
+
+  .slick-track {
+    padding: 12px 0;
+  }
 `
