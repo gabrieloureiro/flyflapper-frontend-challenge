@@ -12,17 +12,15 @@
 
   <img src="/public/images/flapper.png" alt="flapper" width="140" height="65">
 
-  <h3 align="center">iFood + Brainweb Frontend Challenge</h3>
+  <h3 align="center">Flapper Frontend Challenge</h3>
 
   <p align="center">
-      An incredible challenge made for iFood and Brainweb!
+      An incredible challenge made for Flapper!
     <br />
     <br />
-    <a href="https://brainweb-ifood-frontend-challenge.vercel.app/">View Demo</a>
+    <a href="https://github.com/gabrieloureiro/flyflapper-frontend-challenge/issues">Report Bug</a>
     ·
-    <a href="https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/issues">Request Feature</a>
+    <a href="https://github.com/gabrieloureiro/flyflapper-frontend-challenge/issues">Request Feature</a>
   </p>
 </p>
 
@@ -55,9 +53,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![image](https://user-images.githubusercontent.com/39869298/109377454-460d9200-78aa-11eb-87a6-7d6ddd4105ff.png)
+![image](https://user-images.githubusercontent.com/39869298/109913983-c1e25280-7c8d-11eb-9061-e429b56a1dac.png)
 
-This platform allows the user to assemble a custom pizza or buy a special offer.
+This platform allows the user to buy seats in on custom flights.
 
 ### Built With
 
@@ -66,6 +64,7 @@ This platform allows the user to assemble a custom pizza or buy a special offer.
 * [Styled Components](https://styled-components.com/)
 * [Next.js](https://nextjs.org/)
 * [Redux](https://react-redux.js.org/)
+* [Redux-Saga](https://redux-saga.js.org/)
 * [Redux Persist](https://github.com/rt2zz/redux-persist)
 * [Framer Motion](https://www.framer.com/api/motion/)
 
@@ -77,8 +76,6 @@ This platform allows the user to assemble a custom pizza or buy a special offer.
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-If you do not want to run the project in the development environment, you can access it at [DEMO](https://brainweb-ifood-frontend-challenge.vercel.app/).
 
 ### Prerequisites
 
@@ -98,7 +95,7 @@ You need to install npm (to install yarn, hahaha)
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge.git
+   git clone https://github.com/gabrieloureiro/flyflapper-frontend-challenge.git
    ```
 2. Install YARN packages
    ```sh
@@ -113,30 +110,13 @@ You need to install npm (to install yarn, hahaha)
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-* Click in the button <strong>'Ir para o Hub'</strong> to access the platform
+* Click in the button <strong>'Buy a seat'</strong> to add a seat in the cart for the selected flight
 
-![image](https://user-images.githubusercontent.com/39869298/109377229-ba473600-78a8-11eb-8b2d-fafe0f991a98.png)
+![image](https://user-images.githubusercontent.com/39869298/109914233-4c2ab680-7c8e-11eb-9a3e-84a89ce05a59.png)
 
-* To assemble a pizza: click at card in the left
+* To view your cart, click in the <strong>Cart Icon</strong> on header
 
-![image](https://user-images.githubusercontent.com/39869298/109377490-8240f280-78aa-11eb-8eed-1ee1460f23d5.png)
-
-* To pick a special offer: click at card in the middle
-
-![image](https://user-images.githubusercontent.com/39869298/109377256-f4183c80-78a8-11eb-9456-a361274bbbca.png)
-
-* To read more about the developer: click at card in the right
-
-![image](https://user-images.githubusercontent.com/39869298/109377490-8240f280-78aa-11eb-8eed-1ee1460f23d5.png)
-
-* When you buy a special offer, you earn points that are worth real money
-
-![image](https://user-images.githubusercontent.com/39869298/109377548-d6e46d80-78aa-11eb-9f7b-79b54c558760.png)
-![image](https://user-images.githubusercontent.com/39869298/109377560-e499f300-78aa-11eb-9dc7-68597fb9fca9.png)
-
-## Lighthouse Stats
-
-![image](https://user-images.githubusercontent.com/39869298/109377744-0c3d8b00-78ac-11eb-9508-07bca05a2fff.png)
+![image](https://user-images.githubusercontent.com/39869298/109914338-81cf9f80-7c8e-11eb-85b5-478a241ea48e.png)
 
 
 <!-- CONTACT -->
@@ -154,13 +134,13 @@ Email - [gabrieloureirof@gmail.com](mailto:gabrieloureirof@gmail.com)
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/gabrieloureiro/brainweb-ifood-frontend-challenge.svg?style=for-the-badge
-[contributors-url]: https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/graphs/contributors
+[contributors-url]: https://github.com/gabrieloureiro/flyflapper-frontend-challenge/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/gabrieloureiro/brainweb-ifood-frontend-challenge.svg?style=for-the-badge
-[forks-url]: https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/network/members
+[forks-url]: https://github.com/gabrieloureiro/flyflapper-frontend-challenge/network/members
 [stars-shield]: https://img.shields.io/github/stars/gabrieloureiro/brainweb-ifood-frontend-challenge.svg?style=for-the-badge
-[stars-url]: https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/stargazers
+[stars-url]: https://github.com/gabrieloureiro/flyflapper-frontend-challenge/stargazers
 [issues-shield]: https://img.shields.io/github/issues/gabrieloureiro/brainweb-ifood-frontend-challenge.svg?style=for-the-badge
-[issues-url]: https://github.com/gabrieloureiro/brainweb-ifood-frontend-challenge/issues
+[issues-url]: https://github.com/gabrieloureiro/flyflapper-frontend-challenge/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/gabrieloureiro
 [product-screenshot]: images/screenshot.png
