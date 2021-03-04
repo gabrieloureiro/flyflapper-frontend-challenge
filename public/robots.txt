@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://url/sitemap.xml
+Sitemap: https://flyflapper-frontend-challenge.vercel.app/sitemap.xml
