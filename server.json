@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": "6165a006-7f2e-43e6-9a68-c397f832e072",
+      "imagePath": "https://dlwwkvaei5hfp.cloudfront.net/route_destinations/Brasilia+-+1.jpg",
+      "title": "Flight from São Paulo to Brasília",
+      "aircraft": "Embraer Phenom 100",
+      "time": 96,
+      "price": 11250
+    },
+    {
+      "id": "1f40778d-aee1-46ff-8358-2549e5489d4d",
+      "imagePath": "https://dlwwkvaei5hfp.cloudfront.net/sections/leisure01.jpg",
+      "title": "Flight from São Paulo to Angra dos Reis (RJ)",
+      "aircraft": "King Air C90B",
+      "time": 46,
+      "price": 2683
+    },
+    {
+      "id": "ef4fab0d-8cb7-4df5-9384-f515070e1bd6",
+      "imagePath": "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/08/rio-de-janeiro-capa2019-01.jpg",
+      "title": "Flight from Goiânia to Rio de Janeiro",
+      "aircraft": "Bandeirante P1",
+      "time": 173,
+      "price": 7879
+    }
+  ],
+  "stock": [
+    {
+      "id": "6165a006-7f2e-43e6-9a68-c397f832e072",
+      "quantity": 4
+    },
+    {
+      "id": "1f40778d-aee1-46ff-8358-2549e5489d4d",
+      "quantity": 6
+    },
+    {
+      "id": "ef4fab0d-8cb7-4df5-9384-f515070e1bd6",
+      "quantity": 18
+    }
+  ]
+}
