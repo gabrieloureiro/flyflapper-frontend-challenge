@@ -16,6 +16,7 @@ export const InfoDeveloper = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 
 `
 
@@ -24,10 +25,11 @@ export const LargeText = styled.h2`
   font-size: 32px;
   font-weight: bold;
   text-align: center;
+  z-index: 2;
 `
 
 export const MediumText = styled.h5`
-
+  z-index: 2;
   font-size: 24px;
   font-weight: 500;
 
@@ -47,10 +49,12 @@ export const SmallText = styled.span`
   text-align: center;
   padding: 8px 0;
   color: ${({ theme }) => theme.text};
+  z-index: 2;
 `
 
 export const Anchor = styled.a`
   margin: 0;
   padding: 0;
   outline: 0;
+  z-index: 2;
 `
