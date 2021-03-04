@@ -1,5 +1,7 @@
-import styled from 'styled-components'
+/* eslint-disable prettier/prettier */
+import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
+import { shade } from 'polished'
 
 export const Title = styled(motion.h1)`
   font-size: 32px;
@@ -19,7 +21,7 @@ export const FloatChat = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${({ theme }) => theme.primary} 0% 0% no-repeat padding-box;
+  background: ${({ theme }) => shade(0.5, theme.primary)} 0% 0% no-repeat padding-box;
   border-radius: 5px;
   right: 50px;
   bottom: 50px;
@@ -73,4 +75,19 @@ export const Message = styled.div`
     border-bottom: 0.5px solid ${({ theme }) => theme.content};
     border-right: 0.5px solid ${({ theme }) => theme.content};
   }
+`
+export const AnimatedContainer = styled(motion.aside)`
+  ${({ theme }) => css`
+    max-width: 100%;
+    height: 6.4rem;
+    align-self: flex-start;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    left: 0;
+    background: ${`linear-gradient(90deg, ${shade(
+  0.2,
+  theme.primary
+)} 20%, ${shade(0.3, theme.primary)} 40%, ${theme.primary} 100%)`};
+  `}
 `

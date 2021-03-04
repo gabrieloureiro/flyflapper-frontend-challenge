@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 /* eslint-disable prettier/prettier */
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 
 import { ProductInterface } from '@/store/modules/cart/types'
 
@@ -42,4 +42,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default memo(Home)

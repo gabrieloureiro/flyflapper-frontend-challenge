@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Head from 'next/head'
 
 import { LayoutInterface } from './types'
 
-import { CONTAINER_ANIMATION, DEFAULT_TRANSITION } from '@/animations'
+import {
+  CONTAINER_ANIMATION,
+  DEFAULT_TRANSITION,
+  GRADIENT_ANIMATION
+} from '@/animations'
 
 import Topbar from '@/components/Topbar'
 import Container from '@/components/Container'
 import { ImWhatsapp } from 'react-icons/im'
 
-import { FloatChat, Message, Title } from './styles'
+import { AnimatedContainer, FloatChat, Message, Title } from './styles'
 
 const Layout: React.FC<LayoutInterface> = ({
   title,
@@ -48,8 +52,13 @@ const Layout: React.FC<LayoutInterface> = ({
         </Message>
         <ImWhatsapp size={24} color="#FFF" />
       </FloatChat>
+      <AnimatedContainer
+        variants={GRADIENT_ANIMATION}
+        initial="unMounted"
+        animate="mounted"
+      />
     </>
   )
 }
 
-export default Layout
+export default memo(Layout)
