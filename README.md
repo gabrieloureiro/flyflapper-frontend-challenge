@@ -18,6 +18,8 @@
       An incredible challenge made for Flapper!
     <br />
     <br />
+    <a href="https://flyflapper-frontend-challenge.vercel.app/">View Demo</a>
+    ·
     <a href="https://github.com/gabrieloureiro/flyflapper-frontend-challenge/issues">Report Bug</a>
     ·
     <a href="https://github.com/gabrieloureiro/flyflapper-frontend-challenge/issues">Request Feature</a>
@@ -76,6 +78,8 @@ This platform allows the user to buy seats in on custom flights.
 
 <!-- GETTING STARTED -->
 ## Getting Started
+
+If you do not want to run the project in the development environment, you can access it at [DEMO](https://flyflapper-frontend-challenge.vercel.app/).
 
 ### Prerequisites
 
