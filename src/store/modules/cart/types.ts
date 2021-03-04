@@ -9,9 +9,10 @@ export interface ProductInterface {
 
 export interface CartItemInterface {
   product: ProductInterface
-  seat: number
+  quantity: number
 }
 
 export interface CartStateInterface {
   items: CartItemInterface[]
+  failedStockCheck: string[]
 }

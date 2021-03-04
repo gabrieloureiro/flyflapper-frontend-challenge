@@ -11,6 +11,8 @@ import { DROP_DOWN_ANIMATION } from './animations'
 
 import useEventListener from '@/hooks/useEventListener'
 import { useRouter } from 'next/router'
+import { route } from 'next/dist/next-server/server/router'
+import { ImRocket } from 'react-icons/im'
 
 const AccountDropdown: React.FC<HtmlHTMLAttributes<HTMLDivElement>> = () => {
   const { theme, changeTheme } = useTheme()
@@ -52,11 +54,15 @@ const AccountDropdown: React.FC<HtmlHTMLAttributes<HTMLDivElement>> = () => {
             <ul>
               <NavButton onClick={() => changeTheme(theme)}>
                 {theme.title === 'light' ? <FiMoon /> : <FiSun />}
-                Alterar Tema
+                Change Theme
+              </NavButton>
+              <NavButton onClick={() => router.push('/about')}>
+                <ImRocket />
+                About developer
               </NavButton>
               <NavButton onClick={() => router.push('/')}>
                 <FiLogOut />
-                Sair
+                Logout
               </NavButton>
             </ul>
           </AnimatedDropdown>

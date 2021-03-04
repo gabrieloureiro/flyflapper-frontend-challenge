@@ -1,25 +1,38 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
 import { ProductInterface } from '@/store/modules/cart/types'
 import { FlightCardProps } from './types'
 
 import formatCurrency from '@/utils/formatCurrency'
 
-import { useDispatch } from 'react-redux'
-import { addProductToCart } from '@/store/modules/cart/actions'
+import { useDispatch, useSelector } from 'react-redux'
+import { addProductToCartRequest } from '@/store/modules/cart/actions'
 
 import { MdAirlineSeatLegroomExtra } from 'react-icons/md'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { Card, IconWrapper } from './styles'
+import { useToast } from '@/hooks/useToast'
+import { successAddToCart } from '@/utils/successToastMessages'
+import { GlobalStateInterface } from '@/store/modules/rootReducer'
+import { errorStockCheck } from '@/utils/errorToastMessages'
 
 const FlightCard: React.FC<FlightCardProps> = ({ product }) => {
   const dispatch = useDispatch()
+  const { addToast } = useToast()
+  const hasFailedStockCheck = useSelector<GlobalStateInterface, boolean>(
+    state => state.cart.failedStockCheck.includes(product.id)
+  )
 
   const handleAddProductToCart = useCallback(
     (product: ProductInterface) => {
-      dispatch(addProductToCart(product))
+      dispatch(addProductToCartRequest(product))
+      if (!hasFailedStockCheck) {
+        addToast(successAddToCart)
+      } else {
+        addToast(errorStockCheck)
+      }
     },
-    [dispatch]
+    [hasFailedStockCheck, dispatch]
   )
 
   return (

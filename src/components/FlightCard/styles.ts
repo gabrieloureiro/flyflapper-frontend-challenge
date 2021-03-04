@@ -18,8 +18,6 @@ export const Card = styled.div<FlightCardProps>`
   box-shadow: 0px 5px 7px #0000000d;
 
   :hover {
-    transform: translateY(-6px);
-
     img {
       transform: scale(1.02)
     }
@@ -88,6 +86,7 @@ export const Card = styled.div<FlightCardProps>`
     }
 
     :hover {
+      transform: translateY(-4px);
       background-color: ${({ theme }) => shade(0.25, theme.primary)};
     }
   }

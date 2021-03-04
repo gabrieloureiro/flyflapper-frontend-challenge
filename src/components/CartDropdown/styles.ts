@@ -5,10 +5,6 @@ import { motion } from 'framer-motion'
 import { IconBase } from 'react-icons'
 import { lighten, shade } from 'polished'
 
-interface IconProps {
-  active?: boolean
-}
-
 export const Container = styled.div`
   position: relative;
   display: flex;
@@ -16,10 +12,10 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Icon = styled(IconBase) <IconProps>``
+export const Icon = styled(IconBase)``
 
 export const AnimatedDropdown = styled(motion.div)`
-  ${({ theme }) => css`
+${({ theme }) => css`
     position: absolute;
     z-index: 10;
     top: 65px;
@@ -47,7 +43,7 @@ export const AnimatedDropdown = styled(motion.div)`
 `
 
 export const CartItem = styled.div`
-  ${({ theme }) => css`
+${({ theme }) => css`
     width: 100%;
     padding: 24px;
     justify-content: space-between;
@@ -67,8 +63,15 @@ export const CartItem = styled.div`
       border-radius: 0 0 5px 5px;
     }
 
+    :first-child:last-child {
+      border-radius: 5px;
+    }
+
     :not(:last-child) {
-      border-bottom: 0.1px dotted ${lighten(0.1, theme.content)};
+      border-bottom: 0.1px dotted
+        ${theme.title === 'dark'
+      ? lighten(0.1, theme.content)
+      : shade(0.1, theme.content)};
     }
 
     div {
@@ -88,14 +91,55 @@ export const CartItem = styled.div`
       }
     }
 
+    button {
+      margin-top: 12px;
+      width: 100%;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      border-radius: 5px;
+      outline: 0;
+      border: 0;
+      background: ${({ theme }) => theme.primary};
+      color: #fff;
+      transition: all 0.2s ease 0s;
+
+      :hover {
+        background-color: ${({ theme }) => shade(0.25, theme.primary)};
+      }
+    }
+
     p {
-      padding-top: 8px;
       text-align: right;
       color: ${({ theme }) =>
       theme.title === 'dark'
         ? shade(0.3, theme.text)
         : lighten(0.3, theme.text)};
       font-size: 14px;
+    }
+  `}
+`
+export const MediumText = styled.span`
+${({ theme }) => css`
+    font-size: 16px;
+    font-weight: bold;
+    color : ${theme.text};
+    padding: 0 !important;
+  `}
+`
+
+export const CartActions = styled.div`
+${({ theme }) => css`
+    display: flex;
+    justify-content: flex-end !important;
+    padding: 12px 0;
+
+    > p {
+      padding-right: 12px;
+    }
+
+    svg + p {
+      color: ${theme.text};
+      padding: 0 8px;
     }
   `}
 `
