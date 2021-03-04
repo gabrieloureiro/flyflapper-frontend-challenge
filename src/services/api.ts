@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_FLAPPER,
+  baseURL: 'https://flapper-frontend-challenge.herokuapp.com/',
   responseType: 'json',
   headers: {
     'content-type': 'application/json',
