@@ -2,6 +2,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
+
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'
 
 const Arrow = ({ arrowColor, left, ...props }: any) => {

@@ -20,6 +20,8 @@ export default createGlobalStyle`
 
   button {
     cursor: pointer;
+    outline:none;
+    border: 0;
 
     &:disabled {
       cursor: not-allowed;

@@ -1,12 +1,18 @@
+/* eslint-disable indent */
+/* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from 'react'
+
+import { ProductInterface } from '@/store/modules/cart/types'
+
+import { useToast } from '@/hooks/useToast'
+
+import api from '@/services/api'
+import { welcomeInformation } from '@/utils/infoToastMessages'
 
 import Layout from '@/components/Layout'
 import Slider from '@/components/Slider'
-import api from '@/services/api'
-import { ProductInterface } from '@/store/modules/cart/types'
 import FlightCard from '@/components/FlightCard'
-import { useToast } from '@/hooks/useToast'
-import { welcomeInformation } from '@/utils/infoToastMessages'
+import CustomSkeleton from '@/components/Skeleton'
 
 const Home: React.FC = () => {
   const { addToast } = useToast()
@@ -23,11 +29,15 @@ const Home: React.FC = () => {
 
   return (
     <Layout title="Flights" description="Select the best flight to you">
-      <Slider>
-        {catalog.map((product: ProductInterface) => {
-          return <FlightCard key={product.id} product={product} />
-        })}
-      </Slider>
+      {catalog.length !== 0 ? (
+        <Slider>
+          {catalog.map((product: ProductInterface) => {
+            return <FlightCard key={product.id} product={product} />
+          })}
+        </Slider>
+      ) : (
+          <CustomSkeleton width="100%" height="530px" />
+        )}
     </Layout>
   )
 }

@@ -4,8 +4,32 @@
 /* eslint-disable prettier/prettier */
 import React, { useState, useRef, useCallback } from 'react'
 
+import { CartProps } from './types'
+import { CartItemInterface, ProductInterface } from '@/store/modules/cart/types'
+import { GlobalStateInterface } from '@/store/modules/rootReducer'
+
+import useEventListener from '@/hooks/useEventListener'
+import { useRouter } from 'next/router'
+import { useToast } from '@/hooks/useToast'
+
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  addProductToCartRequest,
+  clearCart,
+  removeProductFromCart
+} from '@/store/modules/cart/actions'
+
+import formatCurrency from '@/utils/formatCurrency'
+import {
+  successCheckout,
+  successRemoveFromCart
+} from '@/utils/successToastMessages'
+
+import { DROP_DOWN_ANIMATION } from './animations'
+
 import { AnimatePresence } from 'framer-motion'
 import { FiChevronDown, FiChevronUp, FiShoppingCart } from 'react-icons/fi'
+import { AiOutlineDelete } from 'react-icons/ai'
 
 import {
   Container,
@@ -15,28 +39,6 @@ import {
   MediumText,
   CartActions
 } from './styles'
-
-import { AiOutlineDelete } from 'react-icons/ai'
-
-import { DROP_DOWN_ANIMATION } from './animations'
-
-import useEventListener from '@/hooks/useEventListener'
-import { CartProps } from './types'
-import { CartItemInterface, ProductInterface } from '@/store/modules/cart/types'
-import formatCurrency from '@/utils/formatCurrency'
-import {
-  addProductToCartRequest,
-  clearCart,
-  removeProductFromCart
-} from '@/store/modules/cart/actions'
-import { useDispatch, useSelector } from 'react-redux'
-import { GlobalStateInterface } from '@/store/modules/rootReducer'
-import { useToast } from '@/hooks/useToast'
-import {
-  successCheckout,
-  successRemoveFromCart
-} from '@/utils/successToastMessages'
-import { useRouter } from 'next/router'
 
 const CartDropdown: React.FC<CartProps> = ({ items }) => {
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -76,8 +78,10 @@ const CartDropdown: React.FC<CartProps> = ({ items }) => {
   const handleClearCart = useCallback(
     (description: string) => {
       dispatch(clearCart())
-      router.reload()
       addToast({ ...successCheckout, description })
+      setTimeout(() => {
+        router.reload()
+      }, 1000)
     },
     [dispatch]
   )

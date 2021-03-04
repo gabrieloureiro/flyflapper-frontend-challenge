@@ -1,20 +1,22 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback } from 'react'
 
 import { ProductInterface } from '@/store/modules/cart/types'
 import { FlightCardProps } from './types'
+import { GlobalStateInterface } from '@/store/modules/rootReducer'
 
-import formatCurrency from '@/utils/formatCurrency'
+import { useToast } from '@/hooks/useToast'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { addProductToCartRequest } from '@/store/modules/cart/actions'
 
+import formatCurrency from '@/utils/formatCurrency'
+import { successAddToCart } from '@/utils/successToastMessages'
+import { errorStockCheck } from '@/utils/errorToastMessages'
+
 import { MdAirlineSeatLegroomExtra } from 'react-icons/md'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
+
 import { Card, IconWrapper } from './styles'
-import { useToast } from '@/hooks/useToast'
-import { successAddToCart } from '@/utils/successToastMessages'
-import { GlobalStateInterface } from '@/store/modules/rootReducer'
-import { errorStockCheck } from '@/utils/errorToastMessages'
 
 const FlightCard: React.FC<FlightCardProps> = ({ product }) => {
   const dispatch = useDispatch()

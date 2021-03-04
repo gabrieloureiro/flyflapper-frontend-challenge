@@ -1,15 +1,15 @@
 import React from 'react'
-
 import Head from 'next/head'
 
 import { LayoutInterface } from './types'
+
+import { CONTAINER_ANIMATION, DEFAULT_TRANSITION } from '@/animations'
 
 import Topbar from '@/components/Topbar'
 import Container from '@/components/Container'
 import { ImWhatsapp } from 'react-icons/im'
 
 import { FloatChat, Message, Title } from './styles'
-import { CONTAINER_ANIMATION, DEFAULT_TRANSITION } from '@/animations'
 
 const Layout: React.FC<LayoutInterface> = ({
   title,

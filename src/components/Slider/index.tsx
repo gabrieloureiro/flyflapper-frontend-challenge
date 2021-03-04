@@ -1,10 +1,15 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react'
-import { CustomSlider, Wrapper } from './styles'
-import Arrow from './Arrow'
+
 import { SliderProps } from './types'
+
 import settings from './settings'
+
 import { CARDS_ANIMATION, DEFAULT_TRANSITION } from '@/animations'
+
+import Arrow from './Arrow'
+
+import { CustomSlider, Wrapper } from './styles'
 
 const Slider: React.FC<SliderProps> = ({
   arrowColor = '#009788',
