@@ -90,7 +90,7 @@ export const NavButton = styled(Button)`
       color: ${({ theme }) => shade(0.1, theme.primary)};
     }
     :last-child {
-      color: ${({ theme }) => shade(0.1, theme.red)};
+      color: ${({ theme }) => shade(0.1, theme.text)};
       border-radius: 0 0 5px 5px;
     }
   `}

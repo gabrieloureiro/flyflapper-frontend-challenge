@@ -60,10 +60,7 @@ const AccountDropdown: React.FC<HtmlHTMLAttributes<HTMLDivElement>> = () => {
                 <ImRocket />
                 About developer
               </NavButton>
-              <NavButton onClick={() => router.push('/')}>
-                <FiLogOut />
-                Logout
-              </NavButton>
+
             </ul>
           </AnimatedDropdown>
         )}

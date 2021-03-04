@@ -30,8 +30,8 @@ const About: React.FC = () => {
   return (
     <Layout
       title="Gabriel Loureiro"
-      description="Sobre o desenvolvedor"
-      highlightTitle="Sobre o desenvolvedor"
+      description="About the developer"
+      highlightTitle="About the developer"
     >
       <InfoDeveloper
         variants={CONTAINER_ANIMATION}
@@ -43,7 +43,7 @@ const About: React.FC = () => {
         <Image src="/images/gl-@2x.jpg" alt="avatar-stackes" />
         <LargeText>Gabriel Loureiro</LargeText>
         <MediumText>Frontend Developer</MediumText>
-        <SmallText>Brasileiro, solteiro, 22 anos</SmallText>
+        <SmallText>Brazilian, single, 22 years</SmallText>
         <Row wrap justify="center" align="center">
           <Anchor
             aria-label="linkedin"
