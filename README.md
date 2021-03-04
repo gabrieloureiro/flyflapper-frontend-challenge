@@ -10,7 +10,7 @@
 <br />
 <p align="center">
 
-  <img src="/public/images/flapper.png" alt="flapper" width="120" height="65">
+  <img src="/public/images/flapper.png" alt="flapper" width="140" height="65">
 
   <h3 align="center">iFood + Brainweb Frontend Challenge</h3>
 
